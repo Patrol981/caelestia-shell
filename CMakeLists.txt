@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 
+set(VERSION "1.4.2")
+
 if(NOT DEFINED VERSION)
     execute_process(COMMAND git describe --tags --abbrev=0
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"

@@ -23,30 +23,6 @@ ColumnLayout {
         Layout.fillHeight: false
         spacing: Appearance.spacing.normal
 
-        StyledRect {
-            implicitWidth: prompt.implicitWidth + Appearance.padding.normal * 2
-            implicitHeight: prompt.implicitHeight + Appearance.padding.normal * 2
-
-            color: Colours.palette.m3primary
-            radius: Appearance.rounding.small
-
-            MonoText {
-                id: prompt
-
-                anchors.centerIn: parent
-                text: ">"
-                font.pointSize: root.width > 400 ? Appearance.font.size.larger : Appearance.font.size.normal
-                color: Colours.palette.m3onPrimary
-            }
-        }
-
-        MonoText {
-            Layout.fillWidth: true
-            text: "caelestiafetch.sh"
-            font.pointSize: root.width > 400 ? Appearance.font.size.larger : Appearance.font.size.normal
-            elide: Text.ElideRight
-        }
-
         WrappedLoader {
             Layout.fillHeight: true
             active: !iconLoader.active
